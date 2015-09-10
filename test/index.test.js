@@ -221,6 +221,23 @@ describe('Woopra', function() {
         analytics.track('event', { property: 'Property' });
         analytics.called(window.woopra.track, 'event', { property: 'Property' });
       });
+
+      it('should stringify nested objects', function(){
+        analytics.track('event', {
+          products: [
+              {
+                sku: '45790-32',
+                name: 'Monopoly: 3rd Edition'
+              },
+              {
+                sku: '46493-32',
+                name: 'Uno Card Game'
+              }
+            ],
+          orderId: 1
+        });
+        analytics.called(window.woopra.track, 'event', { products: '[{"sku":"45790-32","name":"Monopoly: 3rd Edition"},{"sku":"46493-32","name":"Uno Card Game"}]', orderId: 1 });
+      });
     });
   });
 });
