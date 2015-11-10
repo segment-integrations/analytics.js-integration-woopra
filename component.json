@@ -8,6 +8,8 @@
   "dependencies": {
     "component/each": "0.0.1",
     "segmentio/analytics.js-integration": "^1.0.1",
+    "segmentio/isostring": "1.0.0",
+    "segmentio/unix-time": "1.0.2",
     "ianstormtaylor/to-snake-case": "0.1.2",
     "ianstormtaylor/is": "0.1.1",
     "ianstormtaylor/reduce": "*",

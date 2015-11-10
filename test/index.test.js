@@ -205,6 +205,11 @@ describe('Woopra', function() {
           id: 'id'
         });
       });
+
+      it('should should convert trait dates to unix timestamp in milliseconds', function() {
+        analytics.identify('id', { testdate: '2015-11-04T09:20:22Z' });
+        analytics.called(window.woopra.identify, { id: 'id', testdate: 1446628822000 });
+      });
     });
 
     describe('#track', function() {
