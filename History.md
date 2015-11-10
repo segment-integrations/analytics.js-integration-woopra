@@ -1,4 +1,9 @@
 
+1.0.5 / 2015-11-10
+==================
+
+  * Update a.js woopra integration to handle traits with dates
+
 1.0.4 / 2015-11-10
 ==================
 
