@@ -2,7 +2,7 @@
   "name": "analytics.js-integration-woopra",
   "repo": "segment-integrations/analytics.js-integration-woopra",
   "description": "The Woopra analytics.js integration.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
