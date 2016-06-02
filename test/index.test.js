@@ -1,8 +1,9 @@
+'use strict';
 
-var Analytics = require('analytics.js-core').constructor;
-var integration = require('analytics.js-integration');
-var tester = require('analytics.js-integration-tester');
-var sandbox = require('clear-env');
+var Analytics = require('@segment/analytics.js-core').constructor;
+var integration = require('@segment/analytics.js-integration');
+var tester = require('@segment/analytics.js-integration-tester');
+var sandbox = require('@segment/clear-env');
 var Woopra = require('../lib/');
 
 describe('Woopra', function() {
@@ -227,18 +228,18 @@ describe('Woopra', function() {
         analytics.called(window.woopra.track, 'event', { property: 'Property' });
       });
 
-      it('should stringify nested objects', function(){
+      it('should stringify nested objects', function() {
         analytics.track('event', {
           products: [
-              {
-                sku: '45790-32',
-                name: 'Monopoly: 3rd Edition'
-              },
-              {
-                sku: '46493-32',
-                name: 'Uno Card Game'
-              }
-            ],
+            {
+              sku: '45790-32',
+              name: 'Monopoly: 3rd Edition'
+            },
+            {
+              sku: '46493-32',
+              name: 'Uno Card Game'
+            }
+          ],
           orderId: 1
         });
         analytics.called(window.woopra.track, 'event', { products: '[{"sku":"45790-32","name":"Monopoly: 3rd Edition"},{"sku":"46493-32","name":"Uno Card Game"}]', orderId: 1 });
