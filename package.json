@@ -26,7 +26,7 @@
     "@ndhoule/foldl": "^2.0.1",
     "@segment/analytics.js-integration": "^2.1.0",
     "component-each": "^0.2.6",
-    "is-type": "0.0.1",
+    "is": "^3.1.0",
     "isostring": "0.0.1",
     "json3": "^3.3.2",
     "to-snake-case": "^1.0.0",
