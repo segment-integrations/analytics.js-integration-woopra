@@ -1,3 +1,12 @@
+
+2.0.1 / 2016-09-13
+==================
+
+  * Fix ie8 compat (#6)
+  * Update CONTRIBUTING.md
+  * Move Sauce Labs credentials into circle.yml
+  * Update Karma to 1.1.0
+
 2.0.0 / 2016-06-21
 ==================
 
